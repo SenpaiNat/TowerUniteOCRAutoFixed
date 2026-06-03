@@ -13,4 +13,6 @@ Spams console with logs, its doing checks for letters and tehn using a majority 
 
 ## Current Todo
 
-* Finish todo
+Finish coding the grayscaling so it properly detects the letter
+
+adjust the threshold to make detection more consistant and hitting better checks.
