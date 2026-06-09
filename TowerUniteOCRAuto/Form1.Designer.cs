@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,12 +13,6 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
@@ -36,9 +23,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.StartedStoppedLabel = new System.Windows.Forms.Label();
             this.keybindTextBox = new System.Windows.Forms.TextBox();
+            this.bypassCounterLabel = new System.Windows.Forms.Label();
+            this.previewButton = new System.Windows.Forms.Button();
+            // NEW: Monitor selection controls
+            this.label5 = new System.Windows.Forms.Label();
+            this.monitorComboBox = new System.Windows.Forms.ComboBox();
+            this.labelMonitorInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // label1 (unchanged)
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 7);
@@ -110,11 +103,63 @@
             this.keybindTextBox.TextChanged += new System.EventHandler(this.keybindTextBox_TextChanged);
             this.keybindTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keybindTextBox_KeyDown);
             // 
+            // bypassCounterLabel
+            // 
+            this.bypassCounterLabel.AutoSize = true;
+            this.bypassCounterLabel.Location = new System.Drawing.Point(79, 155);
+            this.bypassCounterLabel.Name = "bypassCounterLabel";
+            this.bypassCounterLabel.Size = new System.Drawing.Size(65, 13);
+            this.bypassCounterLabel.TabIndex = 10;
+            this.bypassCounterLabel.Text = "Bypasses: 0";
+            // 
+            // previewButton
+            // 
+            this.previewButton.Location = new System.Drawing.Point(79, 175);
+            this.previewButton.Name = "previewButton";
+            this.previewButton.Size = new System.Drawing.Size(100, 23);
+            this.previewButton.TabIndex = 11;
+            this.previewButton.Text = "Open Binary Preview";
+            this.previewButton.UseVisualStyleBackColor = true;
+            this.previewButton.Click += new System.EventHandler(this.previewButton_Click);
+            // 
+            // label5 (NEW)
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 204);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Monitor Index:";
+            // 
+            // monitorComboBox (NEW, replaces NumericUpDown)
+            // 
+            this.monitorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monitorComboBox.FormattingEnabled = true;
+            this.monitorComboBox.Location = new System.Drawing.Point(118, 201);
+            this.monitorComboBox.Name = "monitorComboBox";
+            this.monitorComboBox.Size = new System.Drawing.Size(45, 21);
+            this.monitorComboBox.TabIndex = 13;
+            // 
+            // labelMonitorInfo (NEW)
+            // 
+            this.labelMonitorInfo.AutoSize = true;
+            this.labelMonitorInfo.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular);
+            this.labelMonitorInfo.Location = new System.Drawing.Point(115, 225);
+            this.labelMonitorInfo.Name = "labelMonitorInfo";
+            this.labelMonitorInfo.Size = new System.Drawing.Size(135, 12);
+            this.labelMonitorInfo.TabIndex = 14;
+            this.labelMonitorInfo.Text = "0 = Primary, 1 = Second, etc.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 157);
+            this.ClientSize = new System.Drawing.Size(252, 250);  // increased height to 250
+            this.Controls.Add(this.labelMonitorInfo);
+            this.Controls.Add(this.monitorComboBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.previewButton);
+            this.Controls.Add(this.bypassCounterLabel);
             this.Controls.Add(this.keybindTextBox);
             this.Controls.Add(this.StartedStoppedLabel);
             this.Controls.Add(this.label4);
@@ -129,11 +174,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
-        #endregion
-
+        // Designer fields (all controls)
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox delayTimeTextBox;
         private System.Windows.Forms.Label label2;
@@ -142,6 +185,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label StartedStoppedLabel;
         private System.Windows.Forms.TextBox keybindTextBox;
+        private System.Windows.Forms.Label bypassCounterLabel;
+        private System.Windows.Forms.Button previewButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox monitorComboBox;
+        private System.Windows.Forms.Label labelMonitorInfo;
     }
 }
-
